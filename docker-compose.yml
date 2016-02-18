@@ -1,0 +1,27 @@
+web:
+  build: .
+  ports:
+    - 80:80
+  volumes:
+    - ./log:/var/log
+  # env vars are replace into /cms/craft/config
+  environment:
+    # Set locale to UTF-8 (https://oncletom.io/2015/docker-encoding/)
+    LANG: C.UTF-8
+
+    # Make available by coalition
+    VIRTUAL_HOST: craft.dev
+    VIRTUAL_PORT: 80
+
+    # DB is linked
+    DB_HOST: mysql
+    DB_NAME: craft_dev
+    DB_PORT: 3306
+    DB_USER: craft_dev
+    DB_PASS: secret
+
+    # Craft specific
+    APPID: craft_dev # unqiue id for app instance
+    DEV: 'false'
+    BASEURL: http://craft.dev/ # use nginx-proxy port
+    ENV_REPLACE_FOLDER: /usr/cms/craft/config
