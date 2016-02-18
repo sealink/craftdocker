@@ -20,6 +20,9 @@ RUN echo $(egrep '(CRAFT_VERSION|CRAFT_BUILD)' /usr/cms/craft/app/Info.php | awk
 # remove default template files
 RUN rm -rf /usr/cms/craft/templates/*
 
+# add default config
+ADD ./config /usr/cms/craft/config
+
 RUN chown -Rf nginx:nginx /usr/cms
 
 EXPOSE 80

@@ -1,0 +1,6 @@
+{
+  "plugins": ["source"],
+  "buttons": ["bold","italic","link"],
+  "toolbarFixed": true,
+  "minHeight": 50
+}

@@ -1,0 +1,6 @@
+{
+	"buttons": ["format","bold","italic","lists","link","image","file","horizontalrule"],
+  "plugins": ["table","fullscreen","pagebreak","source"],
+	"toolbarFixed": true,
+  "minHeight": 200
+}
