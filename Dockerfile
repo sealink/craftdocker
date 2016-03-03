@@ -32,6 +32,10 @@ ENV PATH /ruby-2.3.0/bin:$PATH
 RUN gem install pansophy mime-types --no-ri --no-rdoc
 COPY Rakefile /usr/cms
 
+# Run pansophy
+COPY bin/launch /
+CMD ["/launch"]
+
 # add default config
 ADD ./config /usr/cms/craft/config
 

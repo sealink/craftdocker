@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+rake pansophy:config:synchronize
+exec /start.sh
