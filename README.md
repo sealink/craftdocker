@@ -3,6 +3,7 @@ A Craft base running on sealink/phpdocker
 
 * uses php7-fpm & nginx
 * uses imageMagick and php-redis
+* uses pansophy to setup configuration files during deployment
 
 ## Setup
 
