@@ -1,6 +1,5 @@
 web:
   build: .
-  command: /start.sh
   ports:
     - 80:80
   volumes:
