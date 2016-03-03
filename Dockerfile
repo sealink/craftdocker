@@ -20,6 +20,18 @@ RUN echo $(egrep '(CRAFT_VERSION|CRAFT_BUILD)' /usr/cms/craft/app/Info.php | awk
 # remove default template files
 RUN rm -rf /usr/cms/craft/templates/*
 
+# Add pansophy support for deploying configuration files
+RUN \
+  apt-get update && \
+  apt-get -y install libreadline-dev && \
+  apt-get clean
+RUN git clone https://github.com/rbenv/ruby-build.git /ruby-build
+RUN /ruby-build/install.sh
+RUN ruby-build 2.3.0 /ruby-2.3.0
+ENV PATH /ruby-2.3.0/bin:$PATH
+RUN gem install pansophy mime-types --no-ri --no-rdoc
+COPY Rakefile /usr/cms
+
 # add default config
 ADD ./config /usr/cms/craft/config
 
