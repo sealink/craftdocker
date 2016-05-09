@@ -33,6 +33,7 @@ RUN gem install pansophy mime-types --no-ri --no-rdoc
 COPY Rakefile /app/
 
 # add default config
+ENV ENV_REPLACE_FOLDER '/app/craft/config'
 ADD ./config /app/craft/config
 
 RUN chown -Rf nginx:nginx /app
