@@ -38,6 +38,7 @@ COPY known_hosts /root/.ssh/
 RUN chmod 600 /root/.ssh/id_rsa
 
 # add default config
+ENV ENV_REPLACE_FOLDER '/app/craft/config'
 ADD ./config /app/craft/config
 
 RUN chown -Rf nginx:nginx /app
