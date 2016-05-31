@@ -27,8 +27,8 @@ RUN \
   apt-get clean
 RUN git clone https://github.com/rbenv/ruby-build.git /ruby-build
 RUN /ruby-build/install.sh
-RUN ruby-build 2.3.0 /ruby-2.3.0
-ENV PATH /ruby-2.3.0/bin:$PATH
+RUN ruby-build 2.3.1 /ruby-2.3.1
+ENV PATH /ruby-2.3.1/bin:$PATH
 RUN gem install pansophy mime-types --no-ri --no-rdoc
 COPY Rakefile /app/
 
