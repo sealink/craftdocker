@@ -9,14 +9,13 @@
 
 return array(
 
-  'server'   => '$$_DB_HOST_$$',
-  'port'     => '$$_DB_PORT_$$',
-  'user'     => '$$_DB_USER_$$',
-  'password' => '$$_DB_PASS_$$',
-  'database' => '$$_DB_NAME_$$',
+  'server'   => $_ENV['DB_HOST'],
+  'port'     => $_ENV['DB_PORT'],
+  'user'     => $_ENV['DB_USER'],
+  'password' => $_ENV['DB_PASS'],
+  'database' => $_ENV['DB_NAME'],
 
 
   'tablePrefix' => 'craft',
 
 );
-

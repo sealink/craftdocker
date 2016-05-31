@@ -6,7 +6,7 @@
  * All of your system's general configuration settings go in here.
  * You can see a list of the default settings in craft/app/etc/config/defaults/general.php
  */
-define('BASEPATH', '/usr/cms/public');
+define('BASEPATH', '/app/public');
 
 return array(
 
@@ -18,9 +18,9 @@ return array(
   'imageDriver' => 'imagick',
   'generateTransformsBeforePageLoad' => true,
 
-  'devMode' => $$_DEV_$$,
+  'devMode' => $_ENV['DEV'],
 
-  'defaultCookieDomain' => '$$_VIRTUAL_HOST_$$',
+  'defaultCookieDomain' => $_ENV['VIRTUAL_HOST'],
 
   /**
    * The application ID, which is used for things like storing data caches and user sessions.
@@ -28,15 +28,15 @@ return array(
    * Setting it will help avoid the loss of data caches and user sessions when Craft is deployed
    * using a deployment script that will store Craft in an inconsistent location, such as Capistrano.
    */
-  'appId' => '$$_APPID_$$',
+  'appId' => $_ENV['APPID'],
 
-  'siteUrl' => '$$_BASEURL_$$',
+  'siteUrl' => $_ENV['BASEURL'],
 
-  'useCompressedJs' => !$$_DEV_$$,
+  'useCompressedJs' => !$_ENV['DEV'],
 
   'environmentVariables' => array(
       'basePath' => BASEPATH,
-      'baseUrl'  => '$$_BASEURL_$$'
+      'baseUrl'  => $_ENV['BASEURL']
   )
 
 );

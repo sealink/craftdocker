@@ -26,15 +26,14 @@ web:
     APPID: craft_dev # unqiue id for app instance
     DEV: 'false'
     BASEURL: http://craft.dev/ # use nginx-proxy port
-    ENV_REPLACE_FOLDER: /usr/cms/craft/config
 
 mysql:
-  image: 'mysql:5.6'
+  image: mysql:5.6
   environment:
-    MYSQL_ROOT_PASSWORD: 'root'
-    MYSQL_USER: 'craft_dev'
-    MYSQL_PASSWORD: 'secret'
-    MYSQL_DATABASE: 'craft_dev'
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_USER: craft_dev
+    MYSQL_PASSWORD: secret
+    MYSQL_DATABASE: craft_dev
   volumes:
     # Persistent data baby
-    - '/var/lib/mysql'
+    - /var/lib/mysql
