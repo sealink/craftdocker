@@ -9,7 +9,7 @@ WORKDIR /app/
 RUN wget $CRAFTURL -O "/app/craft.zip"
 
 # Extract just the craft directory and index out of the archive, quietly
-RUN unzip -qquo /app/craft.zip 'craft/*' 'public/index.php'
+RUN unzip -qqo /app/craft.zip 'craft/*' 'public/index.php'
 
 # cleanup
 RUN rm /app/craft.zip
