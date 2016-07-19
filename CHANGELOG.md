@@ -1,3 +1,7 @@
+## CraftDocker 1.1.12 ##
+
+* [DIELEMP-7] Update Craft Version 2.6.2797
+
 ## CraftDocker 1.1.11 ##
 
 *   Create Changelog
