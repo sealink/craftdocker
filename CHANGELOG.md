@@ -1,6 +1,11 @@
+## CraftDocker 1.1.13 ##
+
+* [TT-563] Update Craft Version 2.6.2903
+* [TT-563] Update phpdocker base to 7.0.9
+
 ## CraftDocker 1.1.12 ##
 
-* [DIELEMP-7] Update Craft Version 2.6.2797
+* [DLEMP-7] Update Craft Version 2.6.2797
 
 ## CraftDocker 1.1.11 ##
 
