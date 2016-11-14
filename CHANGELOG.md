@@ -1,3 +1,8 @@
+## CraftDocker 1.1.17 ##
+
+* Update Craft Version 2.6.2950
+* Update phpdocker base to 7.0.12
+
 ## CraftDocker 1.1.16 ##
 
 * Update Craft Version 2.6.2945
