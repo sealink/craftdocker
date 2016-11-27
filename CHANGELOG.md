@@ -1,3 +1,7 @@
+## CraftDocker 1.1.18 ##
+
+* Update Craft Version 2.6.2952
+
 ## CraftDocker 1.1.17 ##
 
 * Update Craft Version 2.6.2950
