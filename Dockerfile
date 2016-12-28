@@ -1,7 +1,7 @@
 FROM sealink/phpdocker:7.0.12
 
 # Set craft version
-ENV CRAFTURL 'https://download.craftcdn.com/craft/2.6/2.6.2952/Craft-2.6.2952.zip'
+ENV CRAFTURL 'https://download.craftcdn.com/craft/2.6/2.6.2955/Craft-2.6.2955.zip'
 
 WORKDIR /app/
 
