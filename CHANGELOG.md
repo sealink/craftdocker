@@ -1,3 +1,7 @@
+## CraftDocker Unreleased ##
+
+* [TT-2166] Copy admin resources to speed up admin pages
+
 ## CraftDocker 1.1.22 ##
 
 * Update Craft Version 2.6.2963

@@ -5,14 +5,14 @@ ENV CRAFTURL 'https://download.craftcdn.com/craft/2.6/2.6.2963/Craft-2.6.2963.zi
 
 WORKDIR /app/
 
-# Download the latest Craft, save as craft.zip in current folder
-RUN wget $CRAFTURL -O "/app/craft.zip"
-
-# Extract just the craft directory and index out of the archive, quietly
-RUN unzip -qqo /app/craft.zip 'craft/*' 'public/index.php'
-
-# cleanup
-RUN rm /app/craft.zip
+# Download the latest Craft, save as craft.zip in current folder and extract
+# just the craft directory and index out of the archive, quietly
+RUN \
+  wget $CRAFTURL -O/app/craft.zip && \
+  unzip -qqo /app/craft.zip 'craft/*' public/index.php && \
+  rm /app/craft.zip && \
+  mkdir public/admin && \
+  cp -R craft/app/resources public/admin
 
 # create craft version
 RUN echo $(egrep '(CRAFT_VERSION|CRAFT_BUILD)' /app/craft/app/Info.php | awk '{print $2}' | sed s@[^0-9\.]@@g) | tee public/craftversion.txt
