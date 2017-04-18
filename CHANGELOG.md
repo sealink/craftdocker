@@ -1,3 +1,7 @@
+## CraftDocker 1.1.24 ##
+
+* [ME-259] Update Craft Version to 2.6.2973
+
 ## CraftDocker 1.1.23 ##
 
 * [TT-2166] Copy admin resources to speed up admin pages
